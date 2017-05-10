@@ -1,0 +1,25 @@
+version: '2'
+services:
+  cfcorp-site:
+    build: ../ColeFitCorp-site/.
+    container_name: cfcorp-site
+    ports:
+     - "3000:3000"
+    links:
+     - cfcorp-workouts-service
+  cfcorp-workouts-service:
+    build: ../ColeFitCorp-workouts-service/.
+    container_name: cfcorp-workouts-service
+    ports:
+     - "9000:9000"
+    depends_on:
+     - mongo
+    links:
+     - mongo
+    environment:
+     - NODE_ENV=production
+  mongo:
+    image: mongo
+    container_name: mongo
+    ports:
+     - "27017:27017"
