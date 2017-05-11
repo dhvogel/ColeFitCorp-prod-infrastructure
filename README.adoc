@@ -1,0 +1,5 @@
+== Usage:
+
+Make sure you have docker installed, then:
+
+  $ docker-compose up
