@@ -1,14 +1,14 @@
 version: '2'
 services:
   cfcorp-site:
-    build: ../ColeFitCorp-site/.
+    image: dhvogel/cfcorp-site:1.0
     container_name: cfcorp-site
     ports:
      - "3000:3000"
     links:
      - cfcorp-workouts-service
   cfcorp-workouts-service:
-    build: ../ColeFitCorp-workouts-service/.
+    image: dhvogel/cfcorp-workouts-service:1.0
     container_name: cfcorp-workouts-service
     ports:
      - "9000:9000"
