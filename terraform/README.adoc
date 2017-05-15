@@ -1,0 +1,9 @@
+== Usage:
+
+(Must have terraform installed).
+
+  $ terraform apply
+
+(The instance will come up... wait ~5 minutes after the instance spins up
+to view the site at the instance Public IP. The wait is to allow the
+userdata to do its thing.)
