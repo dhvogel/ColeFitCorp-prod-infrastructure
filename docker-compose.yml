@@ -1,14 +1,14 @@
 version: '2'
 services:
   cfcorp-site:
-    image: dhvogel/cfcorp-site:1.1
+    image: dhvogel/cfcorp-site:1.4
     container_name: cfcorp-site
     ports:
      - "80:3000"
     links:
      - cfcorp-workouts-service
   cfcorp-workouts-service:
-    image: dhvogel/cfcorp-workouts-service:1.1
+    image: dhvogel/cfcorp-workouts-service:1.3
     container_name: cfcorp-workouts-service
     ports:
      - "9000:9000"
