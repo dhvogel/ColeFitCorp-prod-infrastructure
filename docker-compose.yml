@@ -1,7 +1,7 @@
 version: '2'
 services:
   cfcorp-site:
-    image: dhvogel/cfcorp-site:1.4
+    image: dhvogel/cfcorp-site:1.5
     container_name: cfcorp-site
     ports:
      - "80:3000"
