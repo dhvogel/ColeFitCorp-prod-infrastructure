@@ -3,3 +3,6 @@
 Make sure you have docker installed, then:
 
   $ docker-compose up
+
+== S3 push:
+  $ aws s3api put-object --bucket cfcorp --key docker-compose.yml --body docker-compose.yml --acl public-read
